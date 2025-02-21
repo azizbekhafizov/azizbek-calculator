@@ -31,3 +31,13 @@ function calculateResult() {
         shouldResetDisplay = true;
     }
 }
+
+
+function appendOperator(operator) {
+    let lastChar = display.value.slice(-1);
+    
+    if (display.value !== "" && !shouldResetDisplay && !isNaN(lastChar)) {
+        display.value += operator;
+        shouldResetDisplay = false;
+    }
+}
